@@ -9,27 +9,46 @@ It is a trading related webite
 # run this command on terminal before changing anything
 npx tailwindcss -i ./src/input.css -o ./src/output.css --watch 
 
-XLM icon
-StellarXLM
-$0.42
--11.35%
-LINK icon
-ChainlinkLINK
-$17.85
--8.96%
-LTC icon
-LitecoinLTC
-$110.81
--7.46%
-PEPE icon
-PepePEPE
-$0.000013
--10.92%
-BCH icon
-Bitcoin CashBCH
-$504.80
--4.64%
-ALGO icon
-AlgorandALGO
-$0.26
--10.66%
+ADA
+ADA icon
+CardanoADA
+2-6% APR
+TIA
+TIA icon
+CelestiaTIA
+3-6% APR
+9-12% Bonded 21D
+ATOM
+ATOM icon
+CosmosATOM
+7-11% APR
+15-21% Bonded 21D
+DYM
+DYM icon
+DymensionDYM
+1-2% APR
+2-5% Bonded 21D
+ETH
+ETH icon
+EthereumETH
+1-3% APR
+2.25-6.5% Bonded 14D
+FLOW
+FLOW icon
+FlowFLOW
+4-9% APR
+10-13% Bonded 14D
+KAVA
+KAVA icon
+KavaKAVA
+2-5% APR
+5-9% Bonded 21D
+KSM
+KSM icon
+KusamaKSM
+6-10% APR
+12-19% Bonded 7D
+MINA
+MINA icon
+MinaMINA
+6-12% APR
