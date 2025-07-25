@@ -16,14 +16,4 @@ npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
                   <div class="flex justify-center font-medium text-[10px] text-[#27825c] bg-[#1bb4743b] rounded-md w-[100px]">9-12% Bonded 21D</div>
                 </div>
 
-TezosXTZ
-1-6% APR
-5-12% Bonded 4D
 
-The GraphGRT
-5-9% APR
-11-16% Bonded 28D
-
-TRONTRX
-1-3% APR
-2-5% Bonded 14D
