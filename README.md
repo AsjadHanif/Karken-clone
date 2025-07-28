@@ -16,42 +16,46 @@ npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
                   <div class="flex justify-center font-medium text-[10px] text-[#27825c] bg-[#1bb4743b] rounded-md w-[100px]">9-12% Bonded 21D</div>
                 </div>
 
-GravityG
-$0.014
-+4.00%
+FwogFWOG
+$0.049
+-1.90%
 
-Peanut the SquirrelPNUT
-$0.28
-+2.86%
+Goatseus MaximusGOAT
+$0.12
++1.83%
 
-Virtuals ProtocolVIRTUAL
-$1.57
-+4.72%
+SPX6900SPX
+$2.25
++12.34%
 
-VineVINE
-$0.064
-+25.67%
+DeriveDRV
+$0.087
++0.72%
 
-JailstoolJAILSTOOL
-$0.0035
-+9.68%
+CoW ProtocolCOW
+$0.44
++6.11%
 
-NotcoinNOT
-$0.0021
-+2.98%
+TokenFiTOKEN
+$0.018
++4.82%
 
-FluxFLUX
-$0.25
-+1.47%
+LiquityLQTY
+$1.21
++4.73%
 
-DogsDOGS
-$0.00014
-+2.31%
+ai16zAI16Z
+$0.16
++5.31%
 
-CronosCRO
-$0.14
-+8.41%
+FartcoinFARTCOIN
+$1.39
++4.17%
 
-OmniOMNI
-$2.40
-+0.91% 
+GriffainGRIFFAIN
+$0.046
++3.64%
+
+LOCK INLOCKIN
+$0.020
++22.40%

@@ -833,6 +833,14 @@ video {
   width: 100%;
 }
 
+.w-\[270px\] {
+  width: 270px;
+}
+
+.w-\[20px\] {
+  width: 20px;
+}
+
 .max-w-none {
   max-width: none;
 }
