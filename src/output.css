@@ -833,6 +833,10 @@ video {
   width: 100%;
 }
 
+.w-\[1200px\] {
+  width: 1200px;
+}
+
 .max-w-none {
   max-width: none;
 }
@@ -873,16 +877,16 @@ video {
 
 @keyframes slide2 {
   0% {
-    transform: translateX(-150%);
+    transform: translateX(-120%);
   }
 
   100% {
-    transform: translateX(-49%);
+    transform: translateX(-19%);
   }
 }
 
 .animate-slide2 {
-  animation: slide2 63s linear infinite;
+  animation: slide2 26s linear infinite;
 }
 
 @keyframes slide3 {

@@ -5,7 +5,7 @@ module.exports = {
       extend: {
         animation: {
           slide: 'slide 45s linear infinite',
-          slide2: 'slide2 63s linear infinite',
+          slide2: 'slide2 26s linear infinite',
           slide3: 'slide3 52s linear infinite',
           slide4: 'slide4 76s linear infinite',
           slide5: 'slide5 26s linear infinite',
@@ -16,8 +16,8 @@ module.exports = {
             '100%': { transform: 'translateX(0)' },
           },
           slide2: {
-            '0%': { transform: 'translateX(-150%)' },
-            '100%': { transform: 'translateX(-49%)' },
+            '0%': { transform: 'translateX(-120%)' },
+            '100%': { transform: 'translateX(-19%)' },
           },
           slide3: {
             '0%': { transform: 'translateX(-101%)' },
