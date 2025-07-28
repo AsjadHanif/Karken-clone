@@ -5,7 +5,7 @@ module.exports = {
       extend: {
         animation: {
           slide: 'slide 45s linear infinite',
-          slide2: 'slide2 26s linear infinite',
+          slide2: 'slide2 66s linear infinite',
           slide3: 'slide3 52s linear infinite',
           slide4: 'slide4 76s linear infinite',
           slide5: 'slide5 26s linear infinite',

@@ -7,7 +7,7 @@
     <title>Karken-clone</title>
 </head>
 <body>
-      <nav class="fixed bg-white w-full">
+    <nav class="fixed bg-white w-full z-50">
   <div class="mx-26 mr-35  max-h-15 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -161,22 +161,22 @@
     </div>
   <div class="part3 bg-[#F6F5F9]">
     <div class="h-32"></div>
-    <div class="w-[86%] grid grid-cols-1 place-self-center">
+    <div class="w-[90%] grid grid-cols-1 place-self-center">
       <h2 class="text-[#2b1463] text-[34px] place-self-center font-bold tracking-tight ">Build your crypto portfolio</h2>
       <div class="h-6"></div>
-      <div>
+      <div class="relative bg-[#F6F5F9] rounded-xl overflow-hidden ">
       <div class="flex flex-col items-center">
-        <div class="rounded-2xl bg-[#e5e4eb] h-12 w-96 flex justify-center items-center gap-8">
-          <div id="popularbtn" class="btn-div"><button class="font-medium text-[#2b1477c5] text-[14px]">Popular</button></div>
-          <div id="rewardbtn" class="btn-div"><button class="font-medium text-[#2b1477c5] text-[14px]">Rewards</button></div>
-          <div id="stablebtn" class="btn-div"><button class="font-medium text-[#2b1477c5] text-[14px]">Stablecoins</button></div>
-          <div id="newlybtn" class="btn-div"><button class="font-medium text-[#2b1477c5] text-[14px]">Newly Listed</button></div>
+        <div class="rounded-xl bg-[#e5e4eb] w-96 flex justify-center">
+          <div class="btn-div h-10 w-24 justify-center flex items-center"><button id="popularbtn" class="font-medium text-[#2b1477c5] text-[14px]">Popular</button></div>
+          <div class="btn-div h-10 w-24 justify-center flex items-center"><button id="rewardbtn" class="Rbtn font-medium text-[#2b1477c5] text-[14px]">Rewards</button></div>
+          <div class="btn-div h-10 w-24 justify-center flex items-center"><button id="stablebtn" class="Sbtn font-medium text-[#2b1477c5] text-[14px] tracking-tight">Stablecoins</button></div>
+          <div class="btn-div h-10 w-24 justify-center flex items-center"><button id="newlybtn" class="Nbtn font-medium text-[#2b1477c5] text-[14px] tracking-tighter">Newly Listed</button></div>
         </div>
       </div>
-      <div class="h-6"></div>
+      <div class="h-2"></div>
       <div class="overflow-hidden group">
-      <div id="popularelem" class="grid grid-rows-3 gap-5 hidden">
-        <div class="flex overflow-hidden gap-5">
+      <div id="popularelem" class="grid grid-rows-3 my-5">
+        <div class="flex overflow-hidden my-5">
           <div class="flex flex-row gap-5 animate-slide group-hover:paused">
             <div class="max-w-none w-[190px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
               <div class="h-10 w-10"><img src="public/img/imgi_61_s_dot.webp" alt=""></div>
@@ -442,7 +442,7 @@
             </div>
           </div>
         </div>
-        <div class="flex overflow-hidden gap-5">
+        <div class="flex overflow-hidden my-5">
           <div class="flex flex-row gap-5 animate-slide2 group-hover:paused">
             <div class="max-w-none w-[180px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
               <div class="h-10 w-10"><img src="public/img/imgi_71_s_trx.webp" alt=""></div>
@@ -682,7 +682,7 @@
               </div>
           </div>
         </div>
-        <div class="flex overflow-hidden gap-5">
+        <div class="flex overflow-hidden my-5">
           <div class="flex flex-row gap-5 animate-slide3 group-hover:paused">
             <div class="max-w-none w-[190px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
               <div class="h-10 w-10"><img src="public/img/imgi_80_s_grt.webp" alt=""></div>
@@ -950,7 +950,7 @@
         </div>
       </div>
       <div id="rewardelem" class="grid grid-rows-3 gap-5 hidden">
-        <div class="flex overflow-hidden gap-5">
+        <div class="flex overflow-hidden my-5">
           <div class="flex flex-row gap-5 animate-slide group-hover:paused">
             <div class="max-w-none w-[180px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
               <div class="h-10 w-10"><img src="public/img/imgi_68_s_ada.webp" alt=""></div>
@@ -1186,7 +1186,7 @@
             </div>
           </div>
         </div>
-        <div class="flex overflow-hidden gap-5">
+        <div class="flex overflow-hidden my-5">
           <div class="flex flex-row gap-5 animate-slide4 group-hover:paused">
             <div class="max-w-none w-[240px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
               <div class="h-10 w-10"><img src="public/img/imgi_61_s_dot.webp" alt=""></div>
@@ -1418,7 +1418,7 @@
             </div>
           </div> 
         </div>
-        <div class="flex overflow-hidden gap-5">
+        <div class="flex overflow-hidden my-5">
           <div class="flex flex-row gap-5 animate-slide5 group-hover:paused">
             <div class="max-w-none w-[240px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
               <div class="h-10 w-10"><img src="public/img/imgi_98_s_eur.webp" alt=""></div>
@@ -1584,7 +1584,7 @@
         </div>
       </div>
       <div id="stableelem" class="grid grid-rows-3 gap-5 hidden">
-        <div class="flex overflow-hidden gap-5">
+        <div class="flex overflow-hidden my-5">
           <div class="flex flex-row gap-5 animate-slide group-hover:paused">
             <div class="max-w-none w-[230px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
               <div class="h-10 w-10"><img src="public/img/imgi_99_s_usdg.webp" alt=""></div>
@@ -1850,7 +1850,7 @@
             </div>
           </div>
         </div>
-        <div class="flex overflow-hidden gap-5">
+        <div class="flex overflow-hidden my-5">
           <div class="flex flex-row gap-5 animate-slide2 group-hover:paused">
             <div class="max-w-none w-[170px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
               <div class="h-10 w-10"><img src="public/img/imgi_108_s_eurq.webp" alt=""></div>
@@ -2116,7 +2116,7 @@
             </div>
           </div>
         </div>
-        <div class="flex overflow-hidden gap-5">
+        <div class="flex overflow-hidden my-5">
           <div class="flex flex-row gap-5 animate-slide3 group-hover:paused">
             <div class="max-w-none w-[170px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
               <div class="h-10 w-10"><img src="public/img/imgi_106_s_usdq.webp" alt=""></div>
@@ -2383,8 +2383,8 @@
           </div>
         </div>
       </div>
-      <div id="newlyelem" class="grid grid-rows-3 gap-5">
-        <div class="flex overflow-hidden gap-5">
+      <div id="newlyelem" class="grid grid-rows-3 gap-5 hidden">
+        <div class="flex overflow-hidden my-5">
           <div class="flex flex-row gap-5 animate-slide group-hover:paused">
             <div class="max-w-none w-[200px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
               <div class="h-10 w-10"><img src="public/img/imgi_109_s_bonk.webp" alt=""></div>
@@ -2650,7 +2650,7 @@
             </div>
           </div>
         </div>
-        <div class="flex overflow-hidden gap-5">
+        <div class="flex overflow-hidden my-5">
           <div class="flex flex-row gap-5 animate-slide2 group-hover:paused">
             <div class="max-w-none w-[180px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
               <div class="h-10 w-10"><img src="public/img/imgi_119_s_g.webp" alt=""></div>
@@ -2916,7 +2916,7 @@
             </div>
           </div>
         </div>
-        <div class="flex overflow-hidden gap-5">
+        <div class="flex overflow-hidden my-5">
           <div class="flex flex-row gap-5 animate-slide3 group-hover:paused">
             <div class="max-w-none w-[190px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
               <div class="h-10 w-10"><img src="public/img/imgi_129_s_fwog.webp" alt=""></div>
@@ -3043,7 +3043,7 @@
                   <span class="text-[#55427c] font-medium">GRIFFAIN</span>
                 </div>
                 <div>
-                  <span class="text-[#53417c] text-[15px]">$0.020</span>
+                  <span class="text-[#53417c] text-[15px]">$0.046</span>
                   <span class="text-[#08844f] text-[15px]">+3.64%</span>
                 </div>
               </div>
@@ -3062,20 +3062,215 @@
               </div>
             </div>
           </div>
-          
+          <div class="flex flex-row gap-5 animate-slide3 group-hover:paused">
+            <div class="max-w-none w-[190px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
+              <div class="h-10 w-10"><img src="public/img/imgi_129_s_fwog.webp" alt=""></div>
+              <div class="flex flex-col">
+                <div>
+                  <span class="text-[#442d79] font-semibold">Fwog</span>
+                  <span class="text-[#55427cd7] font-medium">FWOG</span>
+                </div>
+                <div>
+                  <span class="text-[#53417c] text-[15px]">$0.049</span>
+                  <span class="text-[#d11d45] text-[15px]">-1.90%</span>
+                </div>
+              </div>
+            </div>
+            <div class="max-w-none w-[260px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
+              <div class="h-10 w-10"><img src="public/img/imgi_130_s_goat.webp" alt=""></div>
+              <div class="flex flex-col">
+                <div>
+                  <span class="text-[#442d79] font-semibold">Goatseus Maximus</span>
+                  <span class="text-[#55427cd7] font-medium">GOAT</span>
+                </div>
+                <div>
+                  <span class="text-[#53417c] text-[15px]">$0.12</span>
+                  <span class="text-[#08844f] text-[15px]">+1.83%</span>
+                </div>
+              </div>
+            </div>
+            <div class="max-w-none w-[180px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
+              <div class="h-10 w-10"><img src="public/img/imgi_131_s_spx.webp" alt=""></div>
+              <div class="flex flex-col">
+                <div>
+                  <span class="text-[#442d79] font-semibold">SPX6900</span>
+                  <span class="text-[#55427cd7] font-medium">SPX</span>
+                </div>
+                <div>
+                  <span class="text-[#53417c] text-[15px]">$2.25</span>
+                  <span class="text-[#08844f] text-[15px]">+12.34%</span>
+                </div>
+              </div>
+            </div>
+            <div class="max-w-none w-[180px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
+              <div class="h-10 w-10"><img src="public/img/imgi_132_s_drv.webp" alt=""></div>
+              <div class="flex flex-col">
+                <div>
+                  <span class="text-[#442d79] font-semibold">Derive</span>
+                  <span class="text-[#55427cd7] font-medium">DRV</span>
+                </div>
+                <div>
+                  <span class="text-[#53417c] text-[15px]">$0.087</span>
+                  <span class="text-[#08844f] text-[15px]">+0.73%</span>
+                </div>
+              </div>
+            </div>
+            <div class="max-w-none w-[220px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
+              <div class="h-10 w-10"><img src="public/img/imgi_133_s_cow.webp" alt=""></div>
+              <div class="flex flex-col">
+                <div>
+                  <span class="text-[#442d79] font-semibold">CoW Protocol</span>
+                  <span class="text-[#55427cd7] font-medium">COW</span>
+                </div>
+                <div>
+                  <span class="text-[#53417c] text-[15px]">$0.44</span>
+                  <span class="text-[#08844f] text-[15px]">+6.11%</span>
+                </div>
+              </div>
+            </div>
+            <div class="max-w-none w-[190px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
+              <div class="h-10 w-10"><img src="public/img/imgi_134_s_token.webp" alt=""></div>
+              <div class="flex flex-col">
+                <div>
+                  <span class="text-[#442d79] font-semibold">TokenFi</span>
+                  <span class="text-[#55427cd7] font-medium">TOKEN</span>
+                </div>
+                <div>
+                  <span class="text-[#53417c] text-[15px]">$0.018</span>
+                  <span class="text-[#08844f] text-[15px]">+4.82%</span>
+                </div>
+              </div>
+            </div>
+            <div class="max-w-none w-[180px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
+              <div class="h-10 w-10"><img src="public/img/imgi_135_s_lqty.webp" alt=""></div>
+              <div class="flex flex-col">
+                <div>
+                  <span class="text-[#442d79] font-semibold">Liquity</span>
+                  <span class="text-[#55427cd7] font-medium">LQTY</span>
+                </div>
+                <div>
+                  <span class="text-[#53417c] text-[15px]">$1.21</span>
+                  <span class="text-[#08844f] text-[15px]">+4.73%</span>
+                </div>
+              </div>
+            </div>
+            <div class="max-w-none w-[170px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
+              <div class="h-10 w-10"><img src="public/img/imgi_136_s_ai16z.webp" alt=""></div>
+              <div class="flex flex-col">
+                <div>
+                  <span class="text-[#442d79] font-semibold">ai16z</span>
+                  <span class="text-[#55427cd7] font-medium">AI6Z</span>
+                </div>
+                <div>
+                  <span class="text-[#53417c] text-[15px]">$0.16</span>
+                  <span class="text-[#08844f] text-[15px]">+5.31%</span>
+                </div>
+              </div>
+            </div>
+            <div class="max-w-none w-[220px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
+              <div class="h-10 w-10"><img src="public/img/imgi_137_s_fartcoin.webp" alt=""></div>
+              <div class="flex flex-col">
+                <div>
+                  <span class="text-[#442d79] font-semibold">Fartcoin</span>
+                  <span class="text-[#55427cd7] font-medium">FARTCOIN</span>
+                </div>
+                <div>
+                  <span class="text-[#53417c] text-[15px]">$1.39</span>
+                  <span class="text-[#08844f] text-[15px]">+4.17%</span>
+                </div>
+              </div>
+            </div>
+            <div class="max-w-none w-[220px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
+              <div class="h-10 w-10"><img src="public/img/imgi_138_s_griffain.webp" alt=""></div>
+              <div class="flex flex-col">
+                <div class="">
+                  <span class="text-[#442d79] font-semibold">Griffain</span>
+                  <span class="text-[#55427c] font-medium">GRIFFAIN</span>
+                </div>
+                <div>
+                  <span class="text-[#53417c] text-[15px]">$0.046</span>
+                  <span class="text-[#08844f] text-[15px]">+3.64%</span>
+                </div>
+              </div>
+            </div>
+            <div class="max-w-none w-[220px] h-[70px] rounded-[10px] bg-white flex flex-row items-center justify-center gap-4">
+              <div class="h-10 w-10"><img src="public/img/imgi_139_s_lockin.webp" alt=""></div>
+              <div class="flex flex-col">
+                <div>
+                  <span class="text-[#442d79] font-semibold">LOCK IN</span>
+                  <span class="text-[#55427cd7] font-medium">LOCKIN</span>
+                </div>
+                <div>
+                  <span class="text-[#53417c] text-[15px]">$0.020</span>
+                  <span class="text-[#08844f] text-[15px]">+22.40%</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       </div>
       <div class="h-12"></div>
       <div class="flex justify-center"><button type="button" class="w-[88px] h-12 relative rounded-[10px] font-medium text-[16px] bg-[#682de7] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button></div>
+      <div class="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-[#f6f5f9] to-transparent z-20"></div>
+      <!-- Right Fade -->
+      <div class="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#f6f5f9] to-transparent z-20"></div>
     </div>
+
   </div>
   <div class="h-28"></div>
+  <div class="w-[80%] flex flex-col place-self-center">
+    <h2 class="text-[#2b1463] flex justify-center text-4xl font-bold">Why Karken?</h2>
+    <div class="h-12"></div>
+    <div class="grid grid-cols-3 gap-7">
+      <div class="grid grid-rows-2 bg-white rounded-3xl">
+        <div class="px-10 py-8">
+          <p class="text-[#251352] text-2xl font-medium">Simplicity</p>
+          <div class="h-2"></div>
+          <p class="text-[#251352]">Buy, sell and trade crypto easily, from your desktop or mobile.</p>
+          <div class="h-4"></div> 
+          <div class="w-full h-10">
+            <button type="button" class="w-28 relative rounded-[10px] font-medium text-[14px] bg-[#EBE5FE] text-[#7138f5] hover:bg-[#D5C8FF] p-2">Get the apps</button>      
+          </div>
+        </div>
+        <div><img src="public/img/imgi_239_notification.png" alt=""></div>
+      </div>
+      <div class="grid grid-rows-2 bg-white rounded-3xl">
+        <div class="px-10 py-8">
+          <p class="text-[#251352] text-2xl font-medium">Education</p>
+          <div class="h-2"></div>
+          <p class="text-[#251352]">Crypto shouldn’t be cryptic – learn about blockchain, trading, crypto and NFTs.</p>
+          <div class="h-4"></div> 
+          <div class="w-full h-10">
+            <button type="button" class="w-28 relative rounded-[10px] font-medium text-[14px] bg-[#EBE5FE] text-[#7138f5] hover:bg-[#D5C8FF] p-2">Learn center</button>      
+          </div>
+        </div>
+        <div><img src="public/img/imgi_245_edu.png" alt=""></div>
+      </div>
+      <div class="grid grid-rows-2 bg-white rounded-3xl ">
+        <div class="px-10 py-8">
+          <p class="text-[#251352] text-2xl font-medium">Service</p>
+          <div class="h-2"></div>
+          <p class="text-[#251352]">Find answers instantly, or get help from our award-winning support team.</p>
+          <div class="h-4"></div> 
+          <div class="w-full h-10">
+            <button type="button" class="w-30 relative rounded-[10px] font-medium text-[14px] bg-[#EBE5FE] text-[#7138f5] hover:bg-[#D5C8FF] p-2">Karken support</button>      
+          </div>
+        </div>
+        <div><img src="public/img/imgi_251_chat.png" alt=""></div>
+      </div>
+    </div>
+      
+    <div class="h-12"></div>
+    <div class="flex justify-center">
+    <button type="button" class="w-[200px] h-12 relative rounded-[10px] font-medium text-[15px] bg-[#7132f5] text-white hover:bg-[#6029D5] px-3 py-1.5">Get started with Karken</button>      
+    </div>
+  </div>
+  <div class="h-14"></div>
   </div>
 
 </div>
-</div>
 
-<script src="public/js/script.js"></script>
+<script src="src/script.js"></script>
 </body>
 </html>
