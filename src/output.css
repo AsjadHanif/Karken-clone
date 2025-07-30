@@ -754,6 +754,38 @@ video {
   height: 100%;
 }
 
+.h-0 {
+  height: 0px;
+}
+
+.h-1 {
+  height: 0.25rem;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
+.h-40 {
+  height: 10rem;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
+.h-14 {
+  height: 3.5rem;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -784,6 +816,10 @@ video {
 
 .w-5 {
   width: 1.25rem;
+}
+
+.w-60 {
+  width: 15rem;
 }
 
 .w-96 {
@@ -878,8 +914,36 @@ video {
   width: 100%;
 }
 
-.w-60 {
-  width: 15rem;
+.w-\[70\] {
+  width: 70;
+}
+
+.w-\[60\%\] {
+  width: 60%;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-48 {
+  width: 12rem;
+}
+
+.w-\[48\] {
+  width: 48;
+}
+
+.w-\[120\] {
+  width: 120;
+}
+
+.w-\[120\%\] {
+  width: 120%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
 }
 
 .max-w-none {
@@ -988,12 +1052,20 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .grid-rows-2 {
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .grid-rows-3 {
   grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.grid-rows-5 {
+  grid-template-rows: repeat(5, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1064,6 +1136,10 @@ video {
   scroll-behavior: smooth;
 }
 
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
 .rounded-3xl {
   border-radius: 1.5rem;
 }
@@ -1084,8 +1160,8 @@ video {
   border-radius: 0.75rem;
 }
 
-.rounded-2xl {
-  border-radius: 1rem;
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .bg-\[\#1bb4743b\] {
@@ -1146,10 +1222,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\] {
-  background-color: ;
-}
-
 .bg-gradient-to-l {
   background-image: linear-gradient(to left, var(--tw-gradient-stops));
 }
@@ -1158,27 +1230,15 @@ video {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
-.from-\[\#f6f5f9\] {
-  --tw-gradient-from: #f6f5f9 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(246 245 249 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-cyan-500 {
-  --tw-gradient-from: #06b6d4 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(6 182 212 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-\[\] {
-  --tw-gradient-from:  var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .from-\[\#ba7df7\] {
   --tw-gradient-from: #ba7df7 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(186 125 247 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[\#f6f5f9\] {
+  --tw-gradient-from: #f6f5f9 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(246 245 249 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -1186,20 +1246,12 @@ video {
   --tw-gradient-from-position: 30%;
 }
 
-.to-transparent {
-  --tw-gradient-to: transparent var(--tw-gradient-to-position);
-}
-
-.to-blue-500 {
-  --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position);
-}
-
-.to-\[blue-500\] {
-  --tw-gradient-to: blue-500 var(--tw-gradient-to-position);
-}
-
 .to-\[\#8b59f6\] {
   --tw-gradient-to: #8b59f6 var(--tw-gradient-to-position);
+}
+
+.to-transparent {
+  --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
 
 .p-2 {
@@ -1302,6 +1354,16 @@ video {
 .text-base\/tight {
   font-size: 1rem;
   line-height: 1.25;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-bold {
@@ -1459,12 +1521,28 @@ video {
   }
 } */
 
+.placeholder\:w-20::-moz-placeholder {
+  width: 5rem;
+}
+
+.placeholder\:w-20::placeholder {
+  width: 5rem;
+}
+
 .placeholder\:pl-4::-moz-placeholder {
   padding-left: 1rem;
 }
 
 .placeholder\:pl-4::placeholder {
   padding-left: 1rem;
+}
+
+.placeholder\:pl-5::-moz-placeholder {
+  padding-left: 1.25rem;
+}
+
+.placeholder\:pl-5::placeholder {
+  padding-left: 1.25rem;
 }
 
 .placeholder\:font-medium::-moz-placeholder {
