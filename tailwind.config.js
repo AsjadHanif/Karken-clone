@@ -3,6 +3,9 @@ module.exports = {
     content: ["./*.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
       extend: {
+        gridAutoColumns: {
+          '1fr': 'minmax(200px, 1fr)',
+        },
         animation: {
           slide: 'slide 45s linear infinite',
           slide2: 'slide2 66s linear infinite',

@@ -48,3 +48,15 @@ const btns = [
   });
 }
 changingelembybtn();
+
+function Paymentprogressloader(){
+  var loader = lottie.loadAnimation({
+    container: document.getElementById('loader'), // ID of container
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: './Insider-loading.json' // OR hosted URL
+  });
+
+}
+Paymentprogressloader();
