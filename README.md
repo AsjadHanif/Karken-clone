@@ -16,4 +16,22 @@ npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
                   <div class="flex justify-center font-medium text-[10px] text-[#27825c] bg-[#1bb4743b] rounded-md w-[100px]">9-12% Bonded 21D</div>
                 </div>
 
-      
+Why Kraken?
+Industry-leading security
+Industry-leading security
+How we protect your funds
+24-7 customer service
+24-7 customer service
+Get help whenever you need it
+Deep liquidity and volume
+Deep liquidity and volume
+Helping you maximise profits
+Mission-driven values
+Mission-driven values
+How we earn your trust
+Proof of reserves
+Proof of reserves
+Our commitment to transparency
+Flexible funding options
+Flexible funding options
+Cash, cards, crypto and more

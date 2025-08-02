@@ -8,69 +8,349 @@
     <title>Karken-clone</title>
 </head>
 <body>
-    <nav class="fixed bg-white w-full z-50">
-  <div class="mx-26 mr-35  max-h-15 sm:px-6 lg:px-8">
-    <div class="relative flex h-16 items-center justify-between">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
-          <span class="absolute -inset-0.5"></span>
-          <span class="sr-only">Open main menu</span>
-          <!--
-            Icon when menu is closed.
-
-            Menu open: "hidden", Menu closed: "block"
-          -->
-          <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-          <!--
-            Icon when menu is open.
-
-            Menu open: "block", Menu closed: "hidden"
-          -->
-          <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-        <div class="flex shrink-0 items-center scale-75">
-          <img class="h-8 w-auto" src="public/svg/karkenlogo.svg" alt="Karken" />
-        </div>
-        <div class="hidden sm:ml-6 sm:block">
-          <div class="flex space-x-4 ">
-            <a href="#" class="rounded-md px-2 py-2 text-md font-normal text-violet-900 hover:text-violet-500" aria-current="page">Explore</a>
-            <a href="#" class="rounded-md px-2 py-2 text-md font-normal text-violet-900 hover:text-violet-500">Prices</a>
-            <a href="#" class="rounded-md px-2 py-2 text-md font-normal text-violet-900 hover:text-violet-500">Why Karken?</a>
-            <a href="#" class="rounded-md px-2 py-2 text-md font-normal text-violet-900 hover:text-violet-500">Learn</a>
-            <a href="#" class="rounded-md px-2 py-2 text-md font-normal text-violet-900 hover:text-violet-500">Institutions</a>
-            <a href="#" class="rounded-md px-2 py-2 text-md font-normal text-violet-900 hover:text-violet-500">Support</a>
+  <div class="bg-white w-full fixed">
+    <nav class="bg-white w-[86%] justify-self-center z-50">
+      <div class="max-h-15 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+              <!--
+                Icon when menu is closed.
+    
+                Menu open: "hidden", Menu closed: "block"
+              -->
+              <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <!--
+                Icon when menu is open.
+    
+                Menu open: "block", Menu closed: "hidden"
+              -->
+              <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="flex shrink-0 items-center scale-75">
+              <img class="h-8 w-auto" src="public/svg/karkenlogo.svg" alt="Karken" />
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <!-- Explore Dropdown -->
+                <div class="relative group/explore px-2 py-2">
+                  <a href="#" class="rounded-md text-md font-normal text-violet-900 hover:text-violet-500" aria-current="page">Explore</a>
+                  <div class="absolute -left-8 mt-7 opacity-0 z-50 invisible group-hover/explore:opacity-100 group-hover/explore:visible transition-all duration-300 ease-in-out w-[620px]">
+                    <div class="py-2 bg-white rounded-lg shadow-xl border border-gray-100">
+                      <div class="flex flex-col w-full items-start px-5 py-5">
+                        <div class="text-[#2b1463cc] text-[14px] font-semibold">Products</div>
+                        <div class="grid grid-cols-2 gap-x-14 gap-y-5 pt-4 pb-4">
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_333_sk.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Karken</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">Smart investing made easy</span>
+                            </div>
+                          </a>
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_334_pk.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Karken Pro</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">Tools for advanced traders</span>
+                            </div>
+                          </a>
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_335_dk.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Karken Desktop</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">Supercharged Trading Station</span>
+                            </div>
+                          </a>
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_336_0a38e07f1d558ffb9d78d0b85b0f6181fd10a6a8-36x36.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Karken Institutional</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">Tools for Institutional Traders</span>
+                            </div>
+                          </a>
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_337_24127094ce09e80ec043ee0b20b5190715b018e6-36x36.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Ink</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">Simplified Defi</span>
+                            </div>
+                          </a>
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_338_kk.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Krak</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">The global money app</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="text-[#2b1463cc] text-[14px] font-semibold">Features</div>
+                        <div class="grid grid-cols-2 gap-x-10 gap-y-5 pt-4">
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_339_bb90941de3c2955f149344ca67858747544398d1-36x37.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Buy Crypto</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">Get started with $10</span>
+                            </div>
+                          </a>
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_347_2aa6df1d4d0f5fd5950dd2d55354e3615f8ea331-36x36.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Convert Crypto</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">Fast currency swaps</span>
+                            </div>
+                          </a>
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_341_2f0513c285cebdbd2b204ff0af96ea9145b32078-36x37.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Send Payments</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">24/7 instant payments</span>
+                            </div>
+                          </a>
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_342_bb89bb339b82dd9d90bec03cbdb853e7dc17b1dd-36x36.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Auto Earn</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">Up to 10%+ APR</span>
+                            </div>
+                          </a>
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_343_eaaa6f9c6df674bcd0ea8f3101106f3e292413d7-36x36.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Recurring Buys</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">Invest with intention</span>
+                            </div>
+                          </a>
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_344_1e8a4a4065d792e26177cd86e3ebc569f660c397-36x36.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Kraken+ Subscription</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">Zero-fee crypto trading</span>
+                            </div>
+                          </a>
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_345_00908728878c106d3afe40e894a2044e0f8ba569-36x36.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Staking Crypto</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">Up to 17% APR</span>
+                            </div>
+                          </a>
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_346_60dc48ac7afdd4baf8df7e600a854caad05eee3e-37x36.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Stocks & ETFs</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">Commission-free</span>
+                            </div>
+                          </a>
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_347_2aa6df1d4d0f5fd5950dd2d55354e3615f8ea331-36x36.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Trade xStocks</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">Tokenized U.S. stocks and ETFs</span>
+                            </div>
+                          </a>
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_348_848446c43c26beb69878057004d1470c6ec7267d-36x36.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Margin Trading</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">Trade with 5x leverage</span>
+                            </div>
+                          </a>
+                          <a href="#" class="flex items-start">
+                            <div class="flex justify-center items-center"><img src="public/svg/imgi_349_da58ea9698af870775f8610da3620e7604d08e8b-36x36.svg" class="rounded-lg h-[42px]"></div>
+                            <div class="flex flex-col group pl-3">
+                              <div class="flex flex-row items-center">
+                                <div class="mb-[-2px] flex flex-row items-center">
+                                  <span class="hover:text-ds-brand duration-150 text-[#2b1463cc] font-medium group-hover:text-[#7132f5] ">Futures</span>
+                                  <img 
+                                    src="public/svg/arrow-right-s-line.svg" 
+                                    class="h-4 w-4 transform translate-x-[-8px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:opacity-100">
+                                </div>
+                              </div>
+                              <span class="text-[#2b1463b8] group-hover:text-[#2b1463cc] text-sm ">Powerful, capital-efficient trading</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+              
+                <a href="#" class="rounded-md px-2 py-2 text-md font-normal text-violet-900 hover:text-violet-500">Prices</a>
+              
+                <!-- Why Karken? Dropdown -->
+                <div class="relative group/why px-2 py-2">
+                  <a href="#" class="rounded-md text-md font-normal text-violet-900 hover:text-violet-500">Why Karken?</a>
+                  <div class="absolute left-0 mt-1 w-48 opacity-0 invisible group-hover/why:opacity-100 group-hover/why:visible transition-all duration-300 ease-in-out">
+                    <div class="py-2 bg-white rounded-lg shadow-xl border border-gray-100">
+                      <a href="#" class="block px-4 py-2 text-sm text-violet-900 hover:bg-violet-50">About Us</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-violet-900 hover:bg-violet-50">Our Vision</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-violet-900 hover:bg-violet-50">Benefits</a>
+                    </div>
+                  </div>
+                </div>
+              
+                <a href="#" class="rounded-md px-2 py-2 text-md font-normal text-violet-900 hover:text-violet-500">Learn</a>
+              
+                <!-- Institutions Dropdown -->
+                <div class="relative group/institutions px-2 py-2">
+                  <a href="#" class="rounded-md text-md font-normal text-violet-900 hover:text-violet-500">Institutions</a>
+                  <div class="absolute left-0 mt-1 w-48 opacity-0 invisible group-hover/institutions:opacity-100 group-hover/institutions:visible transition-all duration-300 ease-in-out">
+                    <div class="py-2 bg-white rounded-lg shadow-xl border border-gray-100">
+                      <a href="#" class="block px-4 py-2 text-sm text-violet-900 hover:bg-violet-50">Enterprise</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-violet-900 hover:bg-violet-50">Partners</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-violet-900 hover:bg-violet-50">Solutions</a>
+                    </div>
+                  </div>
+                </div>
+              
+                <a href="#" class="rounded-md px-2 py-2 text-md font-normal text-violet-900 hover:text-violet-500">Support</a>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div class="download m-2 mr-7 scale-150 h-4 w-3.5"><img src="public/svg/download-2-line.svg"></div>
+              <div class="global m-2 mr-4 scale-150 h-4 w-3.5"><img src="public/svg/global-line.svg"></div>
+              
+              <button type="button" class="relative rounded-[10px] font-medium text-[15px] bg-violet-100 text-violet-700 hover:bg-violet-200 px-3 py-1.5 mx-1">log in</button> 
+              <button type="button" class="relative rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button>
+            </div>
           </div>
         </div>
       </div>
-      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <div class="download m-2 mr-7 scale-150 h-4 w-3.5"><img src="public/svg/download-2-line.svg"></div>
-          <div class="global m-2 mr-4 scale-150 h-4 w-3.5"><img src="public/svg/global-line.svg"></div>
-          
-          <button type="button" class="relative rounded-[10px] font-medium text-[15px] bg-violet-100 text-violet-700 hover:bg-violet-200 px-3 py-1.5 mx-1">log in</button> 
-          <button type="button" class="relative rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button>
+    
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pt-2 pb-3">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
+          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
         </div>
       </div>
-    </div>
+    </nav>
   </div>
-
-  <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="sm:hidden" id="mobile-menu">
-    <div class="space-y-1 px-2 pt-2 pb-3">
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
-    </div>
-  </div>
-</nav>
 <div id="main">
   <div id="part1" class="bg-[#F6F5F9] w-full">
     <div class="w-[64%] grid place-self-center grid-cols-2 pt-16">
@@ -82,7 +362,7 @@
       <input type="text" placeholder="ali@gmail.com" 
       class="mt-10 outline-[#8d8d8dbe] outline-1 focus:outline-[#7132F5] focus:outline-2 bg-white rounded-[10px] w-[364px] h-[47px] 
       placeholder:pl-4 placeholder:font-medium">
-      <button type="button" class="mt-10 w-20 relative rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button>      
+      <button type="button" class="mt-10 w-20 relative -z-10 rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button>      
     </div> 
     <div class="grid grid-rows-2">
       <img src="./public/svg/forbes-3.svg" alt="" class="w-20 h-10 mt-6">
