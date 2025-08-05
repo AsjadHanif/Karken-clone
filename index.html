@@ -8,38 +8,15 @@
     <title>Karken-clone</title>
 </head>
 <body>
-  <div class="bg-white w-full fixed">
-    <nav class="bg-white w-[86%] justify-self-center z-50">
+  <div class="bg-white w-full fixed z-50">
+    <nav class="bg-white w-[100%] justify-self-center 2xl:w-[56%] xl:w-[100%] lg:w-[100%]">
       <div class="max-h-15 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <!-- Mobile menu button-->
-            <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
-              <span class="absolute -inset-0.5"></span>
-              <span class="sr-only">Open main menu</span>
-              <!--
-                Icon when menu is closed.
-    
-                Menu open: "hidden", Menu closed: "block"
-              -->
-              <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-              <!--
-                Icon when menu is open.
-    
-                Menu open: "block", Menu closed: "hidden"
-              -->
-              <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex items-center justify-center sm:items-stretch sm:justify-start">
             <div class="flex shrink-0 items-center scale-75">
               <img class="h-8 w-auto" src="public/svg/karkenlogo.svg" alt="Karken" />
             </div>
-            <div class="hidden sm:ml-6 sm:block">
+            <div class="hidden lg:block">
               <div class="flex space-x-4">
                 <!-- Explore Dropdown -->
                 <div class="relative group/explore px-2 py-2">
@@ -528,45 +505,97 @@
             </div>
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <div class="download m-2 mr-7 scale-150 h-4 w-3.5">
-                <div class="relative group/download ">
-                <img src="public/svg/download-2-line.svg">
-                <div class="absolute -left-8 mt-3 z-50 opacity-0 invisible group-hover/download:opacity-100 group-hover/download:visible transition-all duration-300 ease-in-out w-[80px]">
-                  <div class="py-2 bg-white rounded-lg shadow-2xl shadow-gray-200">
-                    <div class="flex flex-col w-full items-start gap-3 px-5 py-2">
-                      <div>
-                      <img src="public/img/qr.png" class="h-11">
+              <div class="flex-row hidden lg:flex">
+                <div class="download m-2 mr-7 scale-150 h-4 w-3.5">
+                  <div class="relative group/download ">
+                  <img src="public/svg/download-2-line.svg">
+                  <div class="absolute -left-8 mt-3 z-50 opacity-0 invisible group-hover/download:opacity-100 group-hover/download:visible transition-all duration-300 ease-in-out w-[80px]">
+                    <div class="py-2 bg-white rounded-lg shadow-2xl shadow-gray-200">
+                      <div class="flex flex-col w-full items-start gap-3 px-5 py-2">
+                        <div>
+                        <img src="public/img/qr.png" class="h-11">
+                        </div>
+                        <div class=""><p class="text-[#2b1463cc] text-[8px] flex w-10 justify-center">Kark App</p></div>
                       </div>
-                      <div class=""><p class="text-[#2b1463cc] text-[8px] flex w-10 justify-center">Kark App</p></div>
                     </div>
                   </div>
+                  </div>
                 </div>
-                </div>
+                <div class="global m-2 mr-4 scale-150 h-4 w-3.5"><img src="public/svg/global-line.svg"></div>
               </div>
-              <div class="global m-2 mr-4 scale-150 h-4 w-3.5"><img src="public/svg/global-line.svg"></div>
-              
-              <button type="button" class="relative rounded-[10px] font-medium text-[15px] bg-violet-100 text-violet-700 hover:bg-violet-200 px-3 py-1.5 mx-1">log in</button> 
-              <button type="button" class="relative rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button>
+              <button type="button" id="navlogin" class="relative rounded-[10px] font-medium text-[15px] bg-[#855bfb29] text-violet-700 hover:bg-violet-200 px-3 py-1.5 mx-1">log in</button> 
+              <button type="button" id="navSignup" class="relative rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button>
+              <div class="inset-y-0 left-0 flex items-center lg:hidden" id="menu">
+                <!-- Mobile menu button-->
+                <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-xl p-2 text-[#551a8b] bg-[#855bfb29]">
+                  <span class="absolute -inset-0.5"></span>
+                  <span class="sr-only">Open main menu</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 [[aria-expanded='true']_&]:hidden">
+                    <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 [&:not([aria-expanded='true']_*)]:hidden">
+                    <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
-    
       <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="sm:hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pt-2 pb-3">
-          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
-          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+      <el-disclosure id="mobile-menu" hidden class="sm:hidden [&:not([hidden])]:block overflow-auto touch-pan-y w-full h-[400px]">
+        <div class="bg-white flex justify-center">
+          <div class="w-[95%] flex flex-col">
+            <div class="flex justify-between border-b-[1px] border-gray-200 py-10">
+              <div><p class="text-[#2b1463] text-[16px]">Explore</p></div>
+              <div>
+                <img src="public/svg/arrow-right-s-line.svg" class="h-4 w-4 opacity-100">
+              </div>
+            </div>
+            <div class="flex justify-start border-b-[1px] border-gray-200 py-10">
+              <div><p class="text-[#2b1463] text-[16px]">Price</p></div>
+            </div>
+            <div class="flex justify-between border-b-[1px] border-gray-200 py-4">
+              <div><p class="text-[#2b1463] text-[16px]">Why Karken?</p></div>
+              <div>
+                <img src="public/svg/arrow-right-s-line.svg" class="h-4 w-4 opacity-100">
+              </div>
+            </div>
+            <div class="flex justify-start border-b-[1px] border-gray-200 py-4">
+              <div><p class="text-[#2b1463] text-[16px]">Learn</p></div>
+            </div>
+            <div class="flex justify-between border-b-[1px] border-gray-200 py-4">
+              <div><p class="text-[#2b1463] text-[16px]">Institutions</p></div>
+              <div>
+                <img src="public/svg/arrow-right-s-line.svg" class="h-4 w-4 opacity-100">
+              </div>
+            </div>
+            <div class="flex justify-start py-4">
+              <div><p class="text-[#2b1463] text-[16px]">Support</p></div>
+            </div>
+            <div class="flex gap-2 flex-col justify-center my-10">
+              <div class="flex justify-center"><p class="text-[#2b1463] text-[16px]">Buy Crypto in minutes</p></div>
+              <div class="flex justify-center">
+              <button type="button" class="rounded-[10px] font-medium text-[15px] bg-[#855bfb29] text-violet-700 hover:bg-violet-200 px-3 py-1.5 mx-1">Get the app</button>
+              </div>
+          </div>
+          </div>
+          <div class="flex justify-between pt-6 px-3 bg-white fixed translate-y-96 w-full h-20 ">
+            <div>
+              <button type="button" class="relative rounded-[10px] font-medium text-[15px] bg-[#855bfb29] text-violet-700 hover:bg-violet-200 px-3 py-1.5 mx-1">log in</button> 
+              <button type="button" class="relative rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button>
+            </div>
+            <div>
+
+            </div>
+          </div>
         </div>
-      </div>
+      </el-disclosure>
     </nav>
   </div>
 <div id="main">
   <div id="part1" class="bg-[#F6F5F9] w-full">
-    <div class="w-[64%] grid place-self-center grid-cols-2 pt-16">
+    <div class="w-[64%] grid place-self-center grid-cols-2 pt-16 2xl:w-[40%] xl:w-[70%] lg">
     <div class="flex flex-col justify-center">
       <div class="text-[45px] font-bold  text-[#2b1463]">Invest in your future</div>
       <div class="mt-3 text-[#2b1463] text-2xl font-medium">Millions of crypto investors trust Kraken,</div>
@@ -594,7 +623,7 @@
   </div>
   </div>
   <div id="part2 bg-white">
-    <div class="grid grid-cols-1 place-self-center w-[70%]">
+    <div class="grid grid-cols-1 place-self-center w-[70%] 2xl:w-[44%]">
       <div class="h-16"></div>
       <div class="items-center flex flex-col mb-5">
         <p class="text-[18px] text-[#1e0e47] font-medium">Accelerating the global adoption of crypto since 2011</p>
@@ -614,12 +643,12 @@
         </div>
       </div>
       <div class="h-10"></div>
-      <div class="grid grid-cols-3 gap-10">
-        <img src="public/img/buy-crypto.png" class="col-span-2" alt="Crypto platform">
+      <div class="flex flex-row gap-14 justify-center">
+        <div><img src="public/img/buy-crypto.png" class="w-[700px]" alt="Crypto platform"></div>
         <div class="flex h-160 flex-col text-base/tight justify-center">
           <p class="text-[#764392]">Crypto platform</p>
           <p class="text-[#2b1463] tracking-tight text-4xl font-bold">Buy crypto in minutes</p>
-          <div class="h-7"></div>
+          <div class="h-7 2xl:h-9"></div>
           <div class="flex items-center gap-2">
             <div class="h-3">
               <div class="w-5 bg-[#f7f7f8] rounded-4xl flex justify-center ">
@@ -647,7 +676,9 @@
             <p class="text-[#341257] tracking-tight font-normal">Buy and sell 458 cryptocurrencies</p>
           </div>
           <div class="h-9"></div>
+          <div>
           <button type="button" class="w-21 h-11 rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button>
+          </div>
     </div> 
         </div>
       <div class="h-16"></div>
@@ -655,10 +686,10 @@
     </div>
   <div class="part3 bg-[#F6F5F9]">
     <div class="h-32"></div>
-    <div class="w-[90%] grid grid-cols-1 place-self-center">
+    <div class="w-[90%] grid grid-cols-1 place-self-center 2xl:w-[56%]  ">
       <h2 class="text-[#2b1463] text-[34px] place-self-center font-bold tracking-tight ">Build your crypto portfolio</h2>
       <div class="h-6"></div>
-      <div class="relative bg-[#F6F5F9] rounded-xl overflow-hidden ">
+      <div class="relative bg-[#F6F5F9] rounded-xl overflow-hidden">
       <div class="flex flex-col items-center">
         <div class="rounded-xl bg-[#e5e4eb] w-96 flex justify-center">
           <div class="btn-div h-10 w-24 justify-center flex items-center"><button id="popularbtn" class="font-medium text-[#2b1477c5] text-[14px]">Popular</button></div>
@@ -668,7 +699,7 @@
         </div>
       </div>
       <div class="h-2"></div>
-      <div class="overflow-hidden group">
+      <div class="overflow-hidden group ">
       <div id="popularelem" class="grid grid-rows-3 my-5">
         <div class="flex overflow-hidden my-5">
           <div class="flex flex-row gap-5 animate-slide group-hover:paused">
@@ -3705,7 +3736,7 @@
       </div>
       </div>
       <div class="h-12"></div>
-      <div class="flex justify-center"><button type="button" class="w-[88px] h-12 relative rounded-[10px] font-medium text-[16px] bg-[#682de7] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button></div>
+      <div class="flex justify-center"><button type="button" class="w-[88px] h-12 rounded-[10px] font-medium text-[16px] bg-[#682de7] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button></div>
       <div class="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-[#f6f5f9] to-transparent z-20"></div>
       <!-- Right Fade -->
       <div class="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#f6f5f9] to-transparent z-20"></div>
@@ -3713,7 +3744,7 @@
 
   </div>
   <div class="h-28"></div>
-  <div class="w-[80%] flex flex-col place-self-center"> 
+  <div class="w-[80%] flex flex-col place-self-center 2xl:w-[50%] xl:w-[90%]"> 
     <h2 class="text-[#2b1463] flex justify-center text-4xl font-bold">Why Karken?</h2>
     <div class="h-12"></div>
     <div class="grid grid-cols-3 gap-7">
@@ -3736,7 +3767,7 @@
           <p class="text-[#251352]">Crypto shouldn’t be cryptic – learn about blockchain, trading, crypto and NFTs.</p>
           <div class="h-4"></div> 
           <div class="w-full h-10">
-            <button type="button" class="w-28 relative rounded-[10px] font-medium text-[14px] bg-[#EBE5FE] text-[#7138f5] hover:bg-[#D5C8FF] p-2">Learn center</button>      
+            <button type="button" class="w-28 rounded-[10px] font-medium text-[14px] bg-[#EBE5FE] text-[#7138f5] hover:bg-[#D5C8FF] p-2">Learn center</button>      
           </div>
         </div>
         <div><img src="public/img/imgi_245_edu.png" alt=""></div>
@@ -3761,7 +3792,7 @@
     </div>
   </div>
   <div class="h-24"></div>
-  <div class="w-[60%] flex place-self-center">
+  <div class="w-[60%] flex place-self-center 2xl:w-[40%] xl:w-[70%]">
     <div class="rounded-2xl bg-gradient-to-r from-[#ba7df7] from-30% to-[#8b59f6] to-70%">
       <div class="grid grid-cols-5 ">
         <div class=""><img src="public/img/imgi_envelop.png" alt="" class="scale-75"></div>
@@ -3783,15 +3814,15 @@
     </div>
   </div>
   <div class="h-24"></div>
-  <div class="w-[90%] flex flex-col place-self-center">
+  <div class="w-[90%] flex flex-col place-self-center 2xl:w-[60%] ">
     <h2 class="text-4xl flex justify-center text-[#2b1463] tracking-tight font-bold">Earn weekly rewards on your crypto</h2>
     <div class="h-5"></div>
     <div class="flex flex-col place-self-center">
       <div class="w-[51%] flex place-self-center"><p class="text-center text-lg text-[#2b1463]">Rewards are available on the assets listed below. Earnings are paid to your account automatically on a weekly basis, in the same asset that earned them.*</p></div>
     </div>
     <div class="h-8"></div>
-    <div class="grid w-full grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] place-content-center gap-4">
-      <div class="max-w-none h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+    <div class="flex w-full flex-wrap justify-center gap-4">
+      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_140_s_tao.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -4043,7 +4074,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4 col-start-2">
+      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4 ">
         <div class="h-10 w-10"><img src="public/img/imgi_98_s_eur.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -4130,20 +4161,20 @@
   </div> 
   </div>
   <div class="part4 bg-[#0b0611] flex justify-center relative">
-    <div class="w-[70%] ">
+    <div class="w-[70%] 2xl:w-[40%] xl:w-[80%]">
       <div class="h-32"></div>
       <div class="flex justify-center">
         <img src="public/img/imgi_228_White-prologo.png" alt="Karken-pro" class="h-6">
       </div>
-      <div class="h-10"></div>
+      <div class="h-6"></div>
       <div class="flex place-self-center justify-center w-[950px]">
-        <h2 class="text-white text-[50px] flex text-center font-bold">Trade spot and margin. All in one powerful interface.</h2>
+        <h2 class="text-white text-[50px] flex text-center font-bold leading-tight tracking-tight">Trade spot and margin. All in one powerful interface.</h2>
       </div>
       <div class="h-10"></div>
       <div class="flex justify-center">
         <img src="public/img/imgi_400_tradingscreen.png" alt="Karken-pro" class="">
       </div>
-      <div class="grid grid-cols-3 gap-5 absolute inset-x-[240px] bottom-[480px] w-[1200px]">
+      <div class="grid grid-cols-3 gap-5">
         <div class="">
           <div class="flex justify-center">
           <img src="public/img/imgi_240_dual-transfer.png" alt="Karken-pro" class="h-16">
@@ -4151,7 +4182,7 @@
           <div class="h-1"></div>
           <h3 class="text-white text-2xl flex justify-center font-medium">Low spreads</h3>
           <div class="h-2"></div>
-          <p class="text-[#837D94] text-xl flex justify-center">Lower your average cost per trade.</p>
+          <p class="text-[#837D94] text-lg flex justify-center">Lower your average cost per trade.</p>
         </div>
         <div class="">
           <div class="flex justify-center">
@@ -4160,7 +4191,7 @@
           <div class="h-1"></div>
           <h3 class="text-white text-2xl flex justify-center font-medium text-center">Deep liquidity across <br> markets</h3>
           <div class="h-2"></div>
-          <p class="text-[#837D94] text-xl flex justify-center">Easily trade large volumes at stable prices.</p>
+          <p class="text-[#837D94] text-lg flex justify-center tracking-tight">Easily trade large volumes at stable prices.</p>
         </div>
         <div class="">
           <div class="flex justify-center">
@@ -4169,10 +4200,10 @@
           <div class="h-1"></div>
           <h3 class="text-white text-2xl flex justify-center font-medium">High rate limits</h3>
           <div class="h-2"></div>
-          <p class="text-[#837D94] text-xl flex justify-center text-center">Trade crypto fast with our robust, low latency API.</p>
+          <p class="text-[#837D94] text-lg flex justify-center text-center">Trade crypto fast with our robust, low latency API.</p>
         </div>
       </div>
-      <div class="h-40"></div>
+      <div class="h-20"></div>
       <div class="flex justify-center">
       <button type="button" class="w-24 static rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-4 py-2.5 ">Sign up</button>      
       </div>
@@ -4236,7 +4267,7 @@
     </div>
   </div>
   <div class="bg-[#F6F5F9] flex justify-center">
-    <div class="w-[80%]">
+    <div class="w-[80%] 2xl:w-[50%] xl:w-[94%]">
       <div class="h-14"></div>
       <div>
         <p class="text-xs text-[#240E52]">Availability of margin trading services is subject to <a href="#" class="text-[#7532f5] hover:underline">certain limitations and eligibility criteria. </a>Trading using margin involves an element of risk and may not be suitable for everyone. Read <a href="#" class="text-[#7532f5] hover:underline">Kraken's Margin Disclosure Statement</a> to learn more.</p>
@@ -4249,7 +4280,7 @@
   </div>
   <div class="h-20"></div>
   <div class="bg-white flex justify-center">
-  <div class="w-[80%]">
+  <div class="w-[80%] 2xl:w-[50%] xl:w-[90%]">
     <div class="grid grid-cols-2">
       <div class="flex flex-col gap-8">
         <div class="">
@@ -4406,7 +4437,7 @@
       </div>
       <div class="text-[#695A86] text-xs font-medium flex items-center">© 2011 - 2025 Payward, Inc.</div>
       <div class="h-12"></div>
-      <div class="text-[#695A86] text-xs italic ">These materials are for general information purposes only and are not investment or financial product advice or a recommendation 
+      <div class="text-[#8142F6] text-xs italic ">These materials are for general information purposes only and are not investment or financial product advice or a recommendation 
         or solicitation to buy, sell, stake or hold any cryptoasset or to engage in any specific trading strategy. Kraken does not and will not work to increase or decrease the 
         price of any particular cryptoasset it makes available. The unpredictable nature of the crypto-asset markets can lead to loss of funds. Tax may be payable on any return 
         and/or on any increase in the value of your cryptoassets and you should seek independent advice on your taxation position. Geographic restrictions may apply. Some crypto 
@@ -4418,6 +4449,7 @@
   </div>
 
 
+<script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
 <script src="src/script.js"></script>
 </body>
 </html>

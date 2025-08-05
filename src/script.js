@@ -60,3 +60,12 @@ function Paymentprogressloader(){
 
 }
 Paymentprogressloader();
+
+function menu(){
+  document.getElementById('menu').addEventListener('click',function(){
+    document.getElementById('navlogin').classList.add("hidden");
+    document.getElementById('navSignup').classList.add("hidden");
+
+})
+}
+menu();

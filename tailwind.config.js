@@ -2,6 +2,9 @@
 module.exports = {
     content: ["./*.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
+      screens: {
+        'lg': '1124px',
+      },
       extend: {
         gridAutoColumns: {
           '1fr': 'minmax(200px, 1fr)',
