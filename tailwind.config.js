@@ -3,7 +3,10 @@ module.exports = {
     content: ["./*.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
       screens: {
-        'lg': '1124px',
+        '2xl': '1536px',
+        'xl': '1280px',
+        'lg': '1150px',
+        'mobile': '770px'
       },
       extend: {
         gridAutoColumns: {

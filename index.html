@@ -7,12 +7,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
     <title>Karken-clone</title>
 </head>
-<body id="body" style="overflow: none;">
-  <div class="bg-white w-full fixed z-50">
-    <nav class="bg-white w-[100%] justify-self-center 2xl:w-[56%] xl:w-[100%] lg:w-[100%]">
-      <div class="max-h-15 sm:px-6 lg:px-8">
+<body id="body" style="overflow: none;" >
+  <div class="bg-white fixed w-full z-50">
+    <nav class="bg-white justify-between 2xl:w-[56%] xl:w-[100%] lg:w-[100%] max-mobile:w-[100%] max-mobile:">
+      <div class="max-h-15 max-mobile:pr-10 max-mobile:pl-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
-          <div class="flex items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex items-center justify-center max-mobile:items-stretch max-mobile:justify-start">
             <div class="flex shrink-0 items-center scale-75">
               <img class="h-8 w-auto" src="public/svg/karkenlogo.svg" alt="Karken" />
             </div>
@@ -504,7 +504,7 @@
               </div>
             </div>
           </div>
-          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div class="absolute inset-y-0 right-0 flex items-center pr-2 max-mobile:static max-mobile:inset-auto max-mobile:ml-6 max-mobile:pr-0">
               <div class="flex-row hidden lg:flex">
                 <div class="download m-2 mr-7 scale-150 h-4 w-3.5">
                   <div class="relative group/download ">
@@ -543,10 +543,10 @@
         </div>
 
       <!-- Mobile menu, show/hide based on menu state. -->
-      <el-disclosure id="mobile-menu" hidden class="sm:hidden [&:not([hidden])]:block overflow-auto touch-pan-y w-full h-[100vh]">
+      <el-disclosure id="mobile-menu" hidden class="max-mobile:hidden [&:not([hidden])]:block overflow-auto touch-pan-y w-full h-[100vh]">
         <div class="bg-white flex justify-center">
           <div class="w-[95%] flex flex-col">
-            <div class="flex justify-between border-b-[1px] border-gray-200 py-4">
+            <div class="flex justify-between border-b-[1px] border-gray-200 py-4" id="menuexplore">
               <div><p class="text-[#2b1463] text-[16px]">Explore</p></div>
               <div>
                 <img src="public/svg/arrow-right-s-line.svg" class="h-4 w-4 opacity-100">
@@ -555,16 +555,16 @@
             <div class="flex justify-start border-b-[1px] border-gray-200 py-4">
               <div><p class="text-[#2b1463] text-[16px]">Price</p></div>
             </div>
-            <div class="flex justify-between border-b-[1px] border-gray-200 py-4">
+            <div class="flex justify-between border-b-[1px] border-gray-200 py-4" id="menuwhy">
               <div><p class="text-[#2b1463] text-[16px]">Why Karken?</p></div>
               <div>
-                <img src="public/svg/arrow-right-s-line.svg" class="h-4 w-4 opacity-100">
+                <img src="public/svg/arrow-right-s-line.svg" class="h-4 w-4 opacity-100" >
               </div>
             </div>
             <div class="flex justify-start border-b-[1px] border-gray-200 py-4">
               <div><p class="text-[#2b1463] text-[16px]">Learn</p></div>
             </div>
-            <div class="flex justify-between border-b-[1px] border-gray-200 py-4">
+            <div class="flex justify-between border-b-[1px] border-gray-200 py-4" id="menuinstitutions">
               <div><p class="text-[#2b1463] text-[16px]">Institutions</p></div>
               <div>
                 <img src="public/svg/arrow-right-s-line.svg" class="h-4 w-4 opacity-100">
@@ -581,13 +581,13 @@
           </div>
           </div>
           </div>
-          <div class="bg-white/3 backdrop-blur-[6px]  fixed bottom-0 w-full ">
+          <div class="bg-white/3 backdrop-blur-[6px] fixed bottom-6 w-full ">
           <div class="flex justify-between py-5 px-4 ">
               <div>
                 <button type="button" class="relative rounded-[10px] font-medium text-[15px] bg-[#855bfb29] text-violet-700 hover:bg-violet-200 px-3 py-1.5 mx-1">log in</button> 
                 <button type="button" class="relative rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button>
               </div>
-              <div class="flex justify-center">
+              <div class="">
                 <button class="flex gap-1">
                   <img class="h-4" src="public/svg/global-line.svg" >
                   <span class="text-[12px] font-medium text-[#2b1463]">EN - US</span>
@@ -599,24 +599,25 @@
       </el-disclosure>
     </nav>
   </div>
-<div id="main">
-  <div id="part1" class="bg-[#F6F5F9] w-full">
-    <div class="w-[64%] grid place-self-center grid-cols-2 pt-16 2xl:w-[40%] xl:w-[70%] lg">
-    <div class="flex flex-col justify-center">
-      <div class="text-[45px] font-bold  text-[#2b1463]">Invest in your future</div>
-      <div class="mt-3 text-[#2b1463] text-2xl font-medium">Millions of crypto investors trust Kraken,</div>
-      <div class=" text-[#2b1463] text-2xl font-bold">the best crypto platform.*</div>
+<div id="main" class="w-full overflow-x-hidden">
+  <div id="part1" class="bg-[#F6F5F9] w-full flex justify-center">
+    <div class="flex justify-center flex-row gap-14 pt-16 2xl:w-[40%] xl:w-[70%] lg:w-[96%] max-mobile:flex-col max-mobile:pt-24 max-mobile:gap-0">
+    <div class="flex flex-col justify-center max-mobile:items-center">
+      <div class="text-[45px] font-bold  text-[#2b1463] max-mobile:text-[32px] max-mobile:tracking-tighter">Invest in your future</div>
+      <div class="mt-3 text-[#2b1463] text-2xl font-medium max-mobile:text-lg max-mobile:font-normal max-mobile:w-[400px] max-mobile:text-center">Millions of crypto investors trust Kraken,<strong>the best crypto platform.*</strong></div>
       <div class="flex flex-row">
       <input type="text" placeholder="ali@gmail.com" 
       class="mt-10 outline-[#8d8d8dbe] outline-1 focus:outline-[#7132F5] focus:outline-2 bg-white rounded-[10px] w-[364px] h-[47px] 
-      placeholder:pl-4 placeholder:font-medium">
-      <button type="button" class="mt-10 w-20 relative -z-10 rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button>      
+      placeholder:pl-4 placeholder:font-medium max-mobile:hidden">
+      <button type="button" class="mt-10 w-20 rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-3 mx-1">Sign up</button>      
     </div> 
-    <div class="grid grid-rows-2">
-      <img src="./public/svg/forbes-3.svg" alt="" class="w-20 h-10 mt-6">
+    <div class="grid grid-rows-2 max-mobile:justify-center">
+      <div class="flex justify-center">
+        <img src="./public/svg/forbes-3.svg" alt="" class="w-20 h-10 mt-6">
+      </div>
       <span class="text-[#40169b] font-light text-[14px]">*Based on the January 2025 Forbes Advisor review of crypto platforms.</span>
     </div>
-    <div class="flex flex-row items-center">
+    <div class="flex flex-row items-center max-mobile:hidden">
       <img src="./public/img/qr.png" alt="" class="ml-2 w-16 h-16 mt-4">
       <a href="#" class="ml-4.5 font-normal text-[#210c4e]">Download the Kraken app</a>
     </div>
@@ -631,31 +632,31 @@
   <div id="part2 bg-white">
     <div class="grid grid-cols-1 place-self-center w-[70%] 2xl:w-[44%]">
       <div class="h-16"></div>
-      <div class="items-center flex flex-col mb-5">
-        <p class="text-[18px] text-[#1e0e47] font-medium">Accelerating the global adoption of crypto since 2011</p>
+      <div class="items-center flex flex-col mb-5 ">
+        <p class="text-[18px] text-[#1e0e47] font-medium max-mobile:text-[16px]">Accelerating the global adoption of crypto since 2011</p>
       </div>
-      <div class="grid grid-cols-3 gap-58">
+      <div class="grid lg:grid-cols-3 gap-58 max-mobile:grid-rows-3 max-mobile:gap-8">
         <div class="items-center flex flex-col">
-          <h3 class="text-4xl text-[#1e0e47] font-medium">15M+</h3>
+          <h3 class="text-4xl text-[#1e0e47] font-medium max-mobile:text-2xl max-mobile:font-normal">15M+</h3>
           <p class="pt-1.5 text-[#3b1b80]">Clients</p>
         </div>
         <div class="items-center flex flex-col">
-          <h3 class="text-4xl text-[#1e0e47] font-medium">190+</h3>
+          <h3 class="text-4xl text-[#1e0e47] font-medium max-mobile:text-2xl max-mobile:font-normal">190+</h3>
           <p class="pt-1.5 text-[#3b1b80]">Countries supported</p>
         </div>
         <div class="items-center flex flex-col">
-          <h3 class="text-4xl text-[#1e0e47] font-medium">$207B+</h3>
+          <h3 class="text-4xl text-[#1e0e47] font-medium max-mobile:text-2xl max-mobile:font-normal">$207B+</h3>
           <p class="pt-1.5 text-[#3b1b80]">Quarterly trading volume</p>
         </div>
       </div>
       <div class="h-10"></div>
-      <div class="flex flex-row gap-14 justify-center">
-        <div><img src="public/img/buy-crypto.png" class="w-[700px]" alt="Crypto platform"></div>
-        <div class="flex h-160 flex-col text-base/tight justify-center">
+      <div class="flex flex-row gap-14 justify-center max-mobile:flex-col">
+        <div class="max-mobile:flex max-mobile:justify-center"><img src="public/img/buy-crypto.png" class="w-[700px] max-mobile:w-[400px]" alt="Crypto platform"></div>
+        <div class="flex h-160 flex-col text-base/tight justify-center max-mobile:text-center">
           <p class="text-[#764392]">Crypto platform</p>
-          <p class="text-[#2b1463] tracking-tight text-4xl font-bold">Buy crypto in minutes</p>
+          <p class="text-[#2b1463] tracking-tight text-4xl font-bold max-mobile:text-2xl">Buy crypto in minutes</p>
           <div class="h-7 2xl:h-9"></div>
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-2 max-mobile:justify-center">
             <div class="h-3">
               <div class="w-5 bg-[#f7f7f8] rounded-4xl flex justify-center ">
                 <p>1</p>
@@ -664,7 +665,7 @@
             <p class="text-[#341257] tracking-tight font-normal">Create your free Kraken account</p>
           </div>
           <div class="h-3"></div>
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-2 max-mobile:justify-center">
             <div class="">
               <div class="w-5 bg-[#f7f7f8] rounded-4xl flex justify-center ">
                 <p>2</p>
@@ -673,7 +674,7 @@
             <p class="text-[#341257] tracking-tight font-normal">Deposit cash or crypto</p>
           </div>
           <div class="h-3"></div>
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-2 max-mobile:justify-center">
             <div class="">
               <div class="w-5 bg-[#f7f7f8] rounded-4xl flex justify-center ">
                 <p>3</p>
@@ -683,9 +684,9 @@
           </div>
           <div class="h-9"></div>
           <div>
-          <button type="button" class="w-21 h-11 rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button>
+          <button type="button" class="w-21 h-11 rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-3 mx-1">Sign up</button>
           </div>
-    </div> 
+        </div> 
         </div>
       <div class="h-16"></div>
       </div>
@@ -693,7 +694,7 @@
   <div class="part3 bg-[#F6F5F9]">
     <div class="h-32"></div>
     <div class="w-[90%] grid grid-cols-1 place-self-center 2xl:w-[56%]  ">
-      <h2 class="text-[#2b1463] text-[34px] place-self-center font-bold tracking-tight ">Build your crypto portfolio</h2>
+      <h2 class="text-[#2b1463] text-[34px] place-self-center font-bold tracking-tight max-mobile:text-[20px]">Build your crypto portfolio</h2>
       <div class="h-6"></div>
       <div class="relative bg-[#F6F5F9] rounded-xl overflow-hidden">
       <div class="flex flex-col items-center">
@@ -3750,11 +3751,11 @@
 
   </div>
   <div class="h-28"></div>
-  <div class="w-[80%] flex flex-col place-self-center 2xl:w-[50%] xl:w-[90%]"> 
-    <h2 class="text-[#2b1463] flex justify-center text-4xl font-bold">Why Karken?</h2>
+  <div class="lg:w-[80%] flex flex-col place-self-center 2xl:w-[50%] xl:w-[90%] max-mobile:w-[94%]"> 
+    <h2 class="text-[#2b1463] flex justify-center text-4xl font-bold max-mobile:text-2xl">Why Karken?</h2>
     <div class="h-12"></div>
-    <div class="grid grid-cols-3 gap-7">
-      <div class="grid grid-rows-2 bg-white rounded-3xl">
+    <div class="grid lg:grid-cols-3 gap-7 max-mobile:grid-rows-3">
+      <div class="flex flex-col bg-white rounded-3xl">
         <div class="px-10 py-8">
           <p class="text-[#251352] text-2xl font-medium">Simplicity</p>
           <div class="h-2"></div>
@@ -3766,7 +3767,7 @@
         </div>
         <div><img src="public/img/imgi_239_notification.png" alt=""></div>
       </div>
-      <div class="grid grid-rows-2 bg-white rounded-3xl">
+      <div class="flex flex-col bg-white rounded-3xl">
         <div class="px-10 py-8">
           <p class="text-[#251352] text-2xl font-medium">Education</p>
           <div class="h-2"></div>
@@ -3778,7 +3779,7 @@
         </div>
         <div><img src="public/img/imgi_245_edu.png" alt=""></div>
       </div>
-      <div class="grid grid-rows-2 bg-white rounded-3xl ">
+      <div class="flex flex-col bg-white rounded-3xl ">
         <div class="px-10 py-8">
           <p class="text-[#251352] text-2xl font-medium">Service</p>
           <div class="h-2"></div>
@@ -3798,19 +3799,19 @@
     </div>
   </div>
   <div class="h-24"></div>
-  <div class="w-[60%] flex place-self-center 2xl:w-[40%] xl:w-[70%]">
+  <div class="lg:w-[60%] flex place-self-center 2xl:w-[40%] xl:w-[70%] max-mobile:w-[94%]">
     <div class="rounded-2xl bg-gradient-to-r from-[#ba7df7] from-30% to-[#8b59f6] to-70%">
-      <div class="grid grid-cols-5 ">
+      <div class="grid grid-cols-5 max-mobile:my-4">
         <div class=""><img src="public/img/imgi_envelop.png" alt="" class="scale-75"></div>
         <div class="flex flex-col col-span-4 justify-center">
           <div>
-            <p class=" text-white text-xl font-bold">Subscribe to Kraken Digest</p>
+            <p class=" text-white text-xl font-bold max-mobile:text-lg">Subscribe to Kraken Digest</p>
             <div class="h-1"></div>
-            <p class="text-white">Stay ahead with insights, trends, and strategies to build your crypto portfolio.</p>
+            <p class="text-white max-mobile:w-[50%]">Stay ahead with insights, trends, and strategies to build your crypto portfolio.</p>
           </div>
           <div class="h-3"></div>
           <div class="flex flex-row">
-            <input type="email" placeholder="jonh@gmail.com" class="rounded-[10px] h-11 w-[45%] placeholder:pl-5">
+            <input type="email" placeholder="jonh@gmail.com" class="rounded-[10px] h-11 lg:w-[45%] placeholder:pl-5 max-mobile:w-[70%]">
             <button type="button" class="w-28 relative rounded-[10px] font-semibold text-[16px] bg-white text-[#7132F5] hover:bg-[#F2F2F2] px-3 py-1.5 mx-1">Subscribe</button>      
           </div>
           <div class="h-2"></div>
@@ -3820,15 +3821,15 @@
     </div>
   </div>
   <div class="h-24"></div>
-  <div class="w-[90%] flex flex-col place-self-center 2xl:w-[60%] ">
-    <h2 class="text-4xl flex justify-center text-[#2b1463] tracking-tight font-bold">Earn weekly rewards on your crypto</h2>
+  <div class="lg:w-[90%] flex flex-col place-self-center 2xl:w-[60%] max-mobile:w-[100%]">
+    <h2 class="text-4xl flex justify-center text-[#2b1463] tracking-tight font-bold max-mobile:text-2xl">Earn weekly rewards on your crypto</h2>
     <div class="h-5"></div>
     <div class="flex flex-col place-self-center">
-      <div class="w-[51%] flex place-self-center"><p class="text-center text-lg text-[#2b1463]">Rewards are available on the assets listed below. Earnings are paid to your account automatically on a weekly basis, in the same asset that earned them.*</p></div>
+      <div class="lg:w-[51%] flex place-self-center"><p class="text-center text-lg text-[#2b1463]">Rewards are available on the assets listed below. Earnings are paid to your account automatically on a weekly basis, in the same asset that earned them.*</p></div>
     </div>
     <div class="h-8"></div>
     <div class="flex w-full flex-wrap justify-center gap-4">
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_140_s_tao.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -3840,7 +3841,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_68_s_ada.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -3852,7 +3853,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_90_s_tia.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -3864,7 +3865,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_85_s_atom.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -3876,7 +3877,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_91_s_dym.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -3888,7 +3889,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_67_s_eth.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -3900,7 +3901,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_92_s_flow.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -3912,7 +3913,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_97_s_inj.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -3924,7 +3925,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_93_s_kava.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -3936,7 +3937,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_82_s_ksm.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -3948,7 +3949,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_94_s_mina.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -3960,7 +3961,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_61_s_dot.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -3972,7 +3973,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_141_s_pol.webp" alt=""></div>
         <div class="flex flex-col">
           <div class="w-40">
@@ -3984,7 +3985,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_95_s_scrt.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -3996,7 +3997,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_96_s_sei.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -4008,7 +4009,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_70_s_sol.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -4020,7 +4021,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_142_s_sui.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -4032,7 +4033,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_88_s_xtz.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -4044,7 +4045,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_80_s_grt.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -4056,7 +4057,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_71_s_trx.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -4068,7 +4069,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_66_s_btc.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -4080,7 +4081,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4 ">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4 ">
         <div class="h-10 w-10"><img src="public/img/imgi_98_s_eur.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -4092,7 +4093,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_102_s_usdt.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -4104,7 +4105,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_100_s_usd.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -4116,7 +4117,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_101_s_usdc.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -4128,7 +4129,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-none w-[200px] h-[160px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
+      <div class="max-w-none lg:w-[200px] lg:h-[160px] max-mobile:w-[160px] max-mobile:h-[140px] rounded-[10px] bg-white flex flex-col items-center justify-center gap-4">
         <div class="h-10 w-10"><img src="public/img/imgi_63_s_xrp.webp" alt=""></div>
         <div class="flex flex-col">
           <div>
@@ -4143,20 +4144,20 @@
     </div>
     <div class="h-16"></div>
     <div class="flex flex-col">
-      <p class="flex justify-center text-[#2B1463] text-2xl"><strong>$800M+</strong> in rewards earned by clients</p>
+      <p class="flex justify-center text-[#2B1463] text-2xl max-mobile:text-lg"><strong>$800M+</strong> in rewards earned by clients</p>
       <div class="h-10"></div>
-      <div class="flex flex-row justify-center place-self-center bg-white rounded-[10px] w-[500px]">
+      <div class="flex flex-row justify-center place-self-center bg-white rounded-[10px] lg:w-[500px] max-mobile:w-[400px]">
         <div id="loader" class="w-28 h-28"></div>
         <p class="flex justify-center items-center text-2xl text-[#2B1463]">Payment in progress</p>
       </div>
       <div class="h-10"></div>
       <div class="flex justify-center">
-      <button type="button" class="w-20 h-12 relative rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5]">Sign up</button>      
+      <button type="button" class="w-44 h-12 relative rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5]">Start earning today</button>      
       </div>
     </div>
     <div class="h-20"></div>
     <div class="w-full flex justify-center">
-      <div class="w-[80%] flex flex-col justify-center text-center">
+      <div class="lg:w-[80%] flex flex-col justify-center text-center">
         <p class="text-xs text-[#2B1463]">Reward rates are subject to change. Participation in the Opt-In Rewards Program involves an element of risk and may not be suitable for everyone. </p>
         <div class="h-2"></div>
         <p class="text-xs text-[#2B1463]" >Projected annual rate is based on the average staking rewards accrued over the past 90 days net of applicable fees and is subject to change. 
@@ -4167,20 +4168,20 @@
   </div> 
   </div>
   <div class="part4 bg-[#0b0611] flex justify-center relative">
-    <div class="w-[70%] 2xl:w-[40%] xl:w-[80%]">
+    <div class="lg:w-[70%] 2xl:w-[40%] xl:w-[80%] max-mobile:w-[94%]">
       <div class="h-32"></div>
       <div class="flex justify-center">
         <img src="public/img/imgi_228_White-prologo.png" alt="Karken-pro" class="h-6">
       </div>
       <div class="h-6"></div>
       <div class="flex place-self-center justify-center w-[950px]">
-        <h2 class="text-white text-[50px] flex text-center font-bold leading-tight tracking-tight">Trade spot and margin. All in one powerful interface.</h2>
+        <h2 class="text-white text-[50px] flex text-center font-bold leading-tight tracking-tight max-mobile:text-[30px]">Trade spot and margin. All in one powerful interface.</h2>
       </div>
       <div class="h-10"></div>
       <div class="flex justify-center">
         <img src="public/img/imgi_400_tradingscreen.png" alt="Karken-pro" class="">
       </div>
-      <div class="grid grid-cols-3 gap-5">
+      <div class="grid lg:grid-cols-3 gap-5 grid-rows-3">
         <div class="">
           <div class="flex justify-center">
           <img src="public/img/imgi_240_dual-transfer.png" alt="Karken-pro" class="h-16">
@@ -4214,12 +4215,12 @@
       <button type="button" class="w-24 static rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-4 py-2.5 ">Sign up</button>      
       </div>
       <div class="h-20"></div>
-      <div class="grid grid-cols-3 gap-8 justify-center">
+      <div class="grid lg:grid-cols-3 gap-8 justify-center max-mobile:grid-rows-3">
         <div class="bg-[#202333] rounded-2xl border border-[#3D446D]">
           <div class="h-12"></div>
           <div class="grid grid-rows-2 gap-7">
             <div class="flex justify-center text-center">
-              <p class="text-white text-xl w-[230px]">Place <strong>advanced orders </strong> on-to-go.</p>
+              <p class="text-white text-xl lg:w-[230px] max-mobile:text-lg max-mobile:w-[200px]">Place <strong>advanced orders </strong> on-to-go.</p>
             </div>
             <div class="flex justify-center">
                <button type="button" class="w-32 static rounded-[10px] font-medium text-[15px] bg-[#302c53] text-white hover:bg-[#2E2955] px-4 py-2.5 ">Get the app</button>      
@@ -4231,7 +4232,7 @@
           <div class="h-12"></div>
           <div class="grid grid-rows-2 gap-7">
             <div class="flex justify-center text-center">
-              <p class="text-white text-xl w-[230px]"><strong>Margin trading</strong>with up to 5x leverage.*</p>
+              <p class="text-white text-xl lg:w-[230px] max-mobile:text-lg max-mobile:w-[200px]"><strong>Margin trading </strong>with up to 5x leverage.*</p>
             </div>
             <div class="flex justify-center">
                <button type="button" class="w-32 static rounded-[10px] font-medium text-[15px] bg-[#302c53] text-white hover:bg-[#2E2955] px-4 py-2.5 ">Get the app</button>      
@@ -4243,7 +4244,7 @@
           <div class="h-12"></div>
           <div class="grid grid-rows-2 gap-7">
             <div class="flex justify-center text-center">
-              <p class="text-white text-xl w-[280px]">Trade 100+ multi-collateral <strong>Futures</strong> contracts.</p>
+              <p class="text-white text-xl lg:w-[280px] max-mobile:text-lg max-mobile:w-[250px]">Trade 100+ multi-collateral <strong>Futures</strong> contracts.</p>
             </div>
             <div class="flex justify-center">
                <button type="button" class="w-32 static rounded-[10px] font-medium text-[15px] bg-[#302c53] text-white hover:bg-[#2E2955] px-4 py-2.5 ">Get the app</button>      
@@ -4256,14 +4257,14 @@
   </div>
   </div>
   <div class="part5 flex justify-center bg-gradient-to-bl from-[#8c63e6] from-10% to-[#4E1ABD] to-80% ">
-    <div class="w-[80%] grid grid-col justify-center">
+    <div class="lg:w-[80%] grid grid-col justify-center">
       <div class="h-40"></div>
       <div class="grid grid-col">
         <div>
-        <span class="text-white text-[44px] flex justify-center font-bold">Start your crypto journey</span>
+        <span class="text-white text-[44px] flex justify-center font-bold max-mobile:text-[30px]">Start your crypto journey</span>
         </div>
         <div class="h-2"></div>
-        <p class="text-white text-xl flex justify-center font-medium">Sign up to buy and sell 468 cryptocurrencies.</p>
+        <p class="text-white text-xl flex justify-center font-medium max-mobile:text-lg">Sign up to buy and sell 468 cryptocurrencies.</p>
         <div class="h-7"></div>
         <div class="flex justify-center">
         <button type="button" class="w-[210px] relative rounded-[10px] font-medium text-[16px] bg-white text-[#7a45f5] hover:bg-[#EAEAEA] py-3">Get Started with Karken</button>
@@ -4273,7 +4274,7 @@
     </div>
   </div>
   <div class="bg-[#F6F5F9] flex justify-center">
-    <div class="w-[80%] 2xl:w-[50%] xl:w-[94%]">
+    <div class="lg:w-[80%] 2xl:w-[50%] xl:w-[94%] max-mobile:w-[94%]">
       <div class="h-14"></div>
       <div>
         <p class="text-xs text-[#240E52]">Availability of margin trading services is subject to <a href="#" class="text-[#7532f5] hover:underline">certain limitations and eligibility criteria. </a>Trading using margin involves an element of risk and may not be suitable for everyone. Read <a href="#" class="text-[#7532f5] hover:underline">Kraken's Margin Disclosure Statement</a> to learn more.</p>
@@ -4286,11 +4287,11 @@
   </div>
   <div class="h-20"></div>
   <div class="bg-white flex justify-center">
-  <div class="w-[80%] 2xl:w-[50%] xl:w-[90%]">
-    <div class="grid grid-cols-2">
+  <div class="lg:w-[80%] 2xl:w-[50%] xl:w-[90%] max-mobile:w-[94%]">
+    <div class="flex lg:flex-row max-mobile:flex-col max-mobile:gap-10">
       <div class="flex flex-col gap-8">
         <div class="">
-          <h2 class="text-[28px] font-bold text-[#28115A]">Take your crypto <br>trading to the next level.</h2>
+          <h2 class="text-[28px] font-bold text-[#28115A] max-mobile:text-[20px]">Take your crypto trading to the next level.</h2>
         </div>
         <ul class="flex flex-row gap-6">
           <li>
@@ -4419,7 +4420,7 @@
       <div class="h-10"></div>
       <div>
       <div class="h-32 border-t border-[#eaeaea] grid content-center">
-        <div class="grid grid-cols-2 justify-between">
+        <div class="grid lg:grid-cols-2 lg:justify-between max-mobile:grid-rows-2 max-mobile:gap-8">
           <div class="flex flex-row gap-4 tracking-wide">
             <div class="text-[#695A86] text-xs font-medium hover:underline flex items-center">Policy Notice</div>
             <div class="text-[#695A86] text-xs font-medium hover:underline flex items-center">Terms of Service</div>
@@ -4428,7 +4429,7 @@
             <div class="text-[#695A86] text-xs font-medium hover:underline flex items-center">Exchange Trading Rules</div>
             <div class="text-[#695A86] text-xs font-medium hover:underline flex items-center">Compliance Hub</div>
           </div>
-          <div class="flex flex-row gap-3 justify-end">
+          <div class="flex flex-row gap-3 lh:justify-end max-mobile:justify-start">
             <div><img src="public/svg/instagram-line.svg" class="h-6"></div>
             <div><img src="public/svg/facebook-fill.svg" class="h-6"></div>
             <div><img src="public/svg/linkedin-box-fill (1).svg" class="h-6"></div>
@@ -4443,7 +4444,7 @@
       </div>
       <div class="text-[#695A86] text-xs font-medium flex items-center">© 2011 - 2025 Payward, Inc.</div>
       <div class="h-12"></div>
-      <div class="text-[#8142F6] text-xs italic ">These materials are for general information purposes only and are not investment or financial product advice or a recommendation 
+      <div class="text-[#2b1463cc] text-xs italic ">These materials are for general information purposes only and are not investment or financial product advice or a recommendation 
         or solicitation to buy, sell, stake or hold any cryptoasset or to engage in any specific trading strategy. Kraken does not and will not work to increase or decrease the 
         price of any particular cryptoasset it makes available. The unpredictable nature of the crypto-asset markets can lead to loss of funds. Tax may be payable on any return 
         and/or on any increase in the value of your cryptoassets and you should seek independent advice on your taxation position. Geographic restrictions may apply. Some crypto 
