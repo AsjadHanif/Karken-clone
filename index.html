@@ -7,7 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
     <title>Karken-clone</title>
 </head>
-<body>
+<body id="body" style="overflow: none;">
   <div class="bg-white w-full fixed z-50">
     <nav class="bg-white w-[100%] justify-self-center 2xl:w-[56%] xl:w-[100%] lg:w-[100%]">
       <div class="max-h-15 sm:px-6 lg:px-8">
@@ -525,9 +525,9 @@
               </div>
               <button type="button" id="navlogin" class="relative rounded-[10px] font-medium text-[15px] bg-[#855bfb29] text-violet-700 hover:bg-violet-200 px-3 py-1.5 mx-1">log in</button> 
               <button type="button" id="navSignup" class="relative rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button>
-              <div class="inset-y-0 left-0 flex items-center lg:hidden" id="menu">
+              <div class="inset-y-0 left-0 flex items-center lg:hidden  pl-1" id="menu">
                 <!-- Mobile menu button-->
-                <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-xl p-2 text-[#551a8b] bg-[#855bfb29]">
+                <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-xl p-1.5 text-[#551a8b] bg-[#855bfb29]">
                   <span class="absolute -inset-0.5"></span>
                   <span class="sr-only">Open main menu</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 [[aria-expanded='true']_&]:hidden">
@@ -543,16 +543,16 @@
         </div>
 
       <!-- Mobile menu, show/hide based on menu state. -->
-      <el-disclosure id="mobile-menu" hidden class="sm:hidden [&:not([hidden])]:block overflow-auto touch-pan-y w-full h-[400px]">
+      <el-disclosure id="mobile-menu" hidden class="sm:hidden [&:not([hidden])]:block overflow-auto touch-pan-y w-full h-[100vh]">
         <div class="bg-white flex justify-center">
           <div class="w-[95%] flex flex-col">
-            <div class="flex justify-between border-b-[1px] border-gray-200 py-10">
+            <div class="flex justify-between border-b-[1px] border-gray-200 py-4">
               <div><p class="text-[#2b1463] text-[16px]">Explore</p></div>
               <div>
                 <img src="public/svg/arrow-right-s-line.svg" class="h-4 w-4 opacity-100">
               </div>
             </div>
-            <div class="flex justify-start border-b-[1px] border-gray-200 py-10">
+            <div class="flex justify-start border-b-[1px] border-gray-200 py-4">
               <div><p class="text-[#2b1463] text-[16px]">Price</p></div>
             </div>
             <div class="flex justify-between border-b-[1px] border-gray-200 py-4">
@@ -573,23 +573,29 @@
             <div class="flex justify-start py-4">
               <div><p class="text-[#2b1463] text-[16px]">Support</p></div>
             </div>
-            <div class="flex gap-2 flex-col justify-center my-10">
+            <div class="flex gap-2 flex-col justify-center mt-10 mb-36">
               <div class="flex justify-center"><p class="text-[#2b1463] text-[16px]">Buy Crypto in minutes</p></div>
               <div class="flex justify-center">
               <button type="button" class="rounded-[10px] font-medium text-[15px] bg-[#855bfb29] text-violet-700 hover:bg-violet-200 px-3 py-1.5 mx-1">Get the app</button>
               </div>
           </div>
           </div>
-          <div class="flex justify-between pt-6 px-3 bg-white fixed translate-y-96 w-full h-20 ">
-            <div>
-              <button type="button" class="relative rounded-[10px] font-medium text-[15px] bg-[#855bfb29] text-violet-700 hover:bg-violet-200 px-3 py-1.5 mx-1">log in</button> 
-              <button type="button" class="relative rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button>
-            </div>
-            <div>
-
+          </div>
+          <div class="bg-white/3 backdrop-blur-[6px]  fixed bottom-0 w-full ">
+          <div class="flex justify-between py-5 px-4 ">
+              <div>
+                <button type="button" class="relative rounded-[10px] font-medium text-[15px] bg-[#855bfb29] text-violet-700 hover:bg-violet-200 px-3 py-1.5 mx-1">log in</button> 
+                <button type="button" class="relative rounded-[10px] font-medium text-[15px] bg-[#7132F5] text-white hover:bg-[#6029D5] px-3 py-1.5 mx-1">Sign up</button>
+              </div>
+              <div class="flex justify-center">
+                <button class="flex gap-1">
+                  <img class="h-4" src="public/svg/global-line.svg" >
+                  <span class="text-[12px] font-medium text-[#2b1463]">EN - US</span>
+                  <img class="h-4" src="public/svg/arrow-down-s-line.svg">
+                </button>
+              </div>
             </div>
           </div>
-        </div>
       </el-disclosure>
     </nav>
   </div>

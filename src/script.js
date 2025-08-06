@@ -61,11 +61,23 @@ function Paymentprogressloader(){
 }
 Paymentprogressloader();
 
-function menu(){
-  document.getElementById('menu').addEventListener('click',function(){
-    document.getElementById('navlogin').classList.add("hidden");
-    document.getElementById('navSignup').classList.add("hidden");
+function menu() {
+  const body = document.getElementById('body');
+  const login = document.getElementById('navlogin');
+  const signup = document.getElementById('navSignup');
 
-})
+  const currentOverflow = window.getComputedStyle(body).overflow;
+
+  if (currentOverflow === "hidden") {
+    // Show everything back
+    body.style.overflow = "auto";
+    login.classList.remove("hidden");
+    signup.classList.remove("hidden");
+  } else {
+    // Hide body scroll and nav buttons
+    body.style.overflow = "hidden";
+    login.classList.add("hidden");
+    signup.classList.add("hidden");
+  }
 }
-menu();
+document.getElementById('menu').addEventListener('click', menu);
