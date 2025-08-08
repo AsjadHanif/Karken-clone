@@ -1005,6 +1005,18 @@ video {
   width: 100%;
 }
 
+.w-12 {
+  width: 3rem;
+}
+
+.w-44 {
+  width: 11rem;
+}
+
+.w-48 {
+  width: 12rem;
+}
+
 .max-w-none {
   max-width: none;
 }
@@ -1213,6 +1225,10 @@ video {
   gap: 2rem;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
 .gap-x-10 {
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
@@ -1249,6 +1265,11 @@ video {
 .gap-x-8 {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
+}
+
+.gap-x-1 {
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -2066,6 +2087,10 @@ video {
 }
 
 @media not all and (min-width: 770px) {
+  .max-mobile\:visible {
+    visibility: visible;
+  }
+
   .max-mobile\:static {
     position: static;
   }
@@ -2156,6 +2181,18 @@ video {
     width: 90%;
   }
 
+  .max-mobile\:w-\[100\] {
+    width: 100;
+  }
+
+  .max-mobile\:w-\[80\%\] {
+    width: 80%;
+  }
+
+  .max-mobile\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .max-mobile\:grid-rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
@@ -2190,6 +2227,11 @@ video {
 
   .max-mobile\:gap-8 {
     gap: 2rem;
+  }
+
+  .max-mobile\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .max-mobile\:pl-6 {
@@ -2256,6 +2298,10 @@ video {
   .mobile\:mx-20 {
     margin-left: 5rem;
     margin-right: 5rem;
+  }
+
+  .mobile\:hidden {
+    display: none;
   }
 
   .mobile\:h-\[160px\] {
